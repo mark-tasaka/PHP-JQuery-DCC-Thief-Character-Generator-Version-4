@@ -1,7 +1,6 @@
 <?php
 
-/*Cleric
-*/
+/*Thief*/
 
 
     function getWeapon($input)
@@ -38,38 +37,28 @@
     }
 
     
-function getRandomWeapons($alignment)
+
+function getRandomWeapons()
 {
+   
+    $weaponsArray = array(1, 2, 4, 5, 6, 8, 13, 17, 18, 20);
 
-    if($alignment == "Lawful")
-    {
-        $weaponsAvaliable = array(3, 14, 18, 20, 22);
-    }
-    
-    if($alignment == "Neutral")
-    {
-        $weaponsAvaliable = array(5, 13, 14, 17, 18, 20);
-    }
+    //shuffle $weaponsArray
+    shuffle($weaponsArray); 
 
-    if($alignment == "Chaotic")
-    {
-        $weaponsAvaliable = array(0, 9, 4, 12, 16, 5, 6, 7);
-    }
-
-    shuffle($weaponsAvaliable); 
-
-    $numberOfWeapons = rand (2, 5);
+    $numberOfWeapons = rand (3, 6);
 
     $weaponsHas = array();
 
     for($j = 0; $j < $numberOfWeapons; ++$j)
     {
-        $weapon = $weaponsAvaliable[$j];
+        $weapon = $weaponsArray[$j];
         array_push($weaponsHas, $weapon);
     }
 
     return $weaponsHas;
 }
+
 
 
 

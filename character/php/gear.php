@@ -1,5 +1,5 @@
 <?php
-
+//Thief
 
 function getGear($input)
 {
@@ -39,14 +39,14 @@ function getGear($input)
         return $arr[$input];
 }
 
-//cleric
+
 function getRandomGear()
 {
-        $gearArray = array(0, 10, 11, 7, 17, 22, 23);
+        $gearArray = array(0, 21, 18, 8, 7, 17, 13, 23);
 
-        $numberOfGear = rand(5, 13);
+        $numberOfGear = rand(5, 12);
 
-        $addToArray = array(1, 2, 3, 4, 5, 6, 8, 9, 12, 13, 14, 15, 16, 18, 19, 20, 21);
+        $addToArray = array(1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 14, 15, 16, 19, 20, 22);
 
         shuffle($addToArray);
 
@@ -59,6 +59,7 @@ function getRandomGear()
         return $gearArray;
 
 }
+
 
 
 ?>

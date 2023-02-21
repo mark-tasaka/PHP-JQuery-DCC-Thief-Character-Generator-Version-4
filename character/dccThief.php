@@ -45,6 +45,7 @@
     include 'php/xp.php';
     include 'php/nameSelect.php';
     include 'php/gender.php';
+    include 'php/thiefAbilities.php';
     
 
     if(isset($_POST["theCharacterName"]))
@@ -281,10 +282,54 @@
        $criticalDie = criticalDie($level);
 
        $attackBonus = attackBonus($level);
+       $luckDie = luckDie($level);
 
        $actionDice = actionDice($level);
 
        $title = title($level, $alignment);
+
+       
+       $backstabArray = getBackstabArray ($alignment);
+       $backstab = $backstabArray[$level];
+
+       $sneakSilentlyArray = getSneakSilentlyArray ($alignment);
+       $sneakSilently = $sneakSilentlyArray[$level];
+
+       $hideInShadowArray = getHideInShadowsArray ($alignment);
+       $hideInShadows = $hideInShadowArray[$level];
+
+       $pickPocketArray = getHideInShadowsArray ($alignment);
+       $pickPocket = $pickPocketArray[$level];
+
+       $climbArray = getClimbArray ($alignment);
+       $climb = $climbArray[$level];
+
+       $pickLockArray = getPickLockArray ($alignment);
+       $pickLock = $pickLockArray[$level];
+
+       $findTrapArray = getFindTrapArray ($alignment);
+       $findTrap = $findTrapArray[$level];
+
+       $disableTrapArray = getDisableTrapArray ($alignment);
+       $disableTrap = $disableTrapArray[$level];
+
+       $forgeDocArray = getForgeDocArray ($alignment);
+       $forgeDoc = $forgeDocArray[$level];
+
+       $disguiseSelfArray = getDisguiseSelfArray ($alignment);
+       $disguiseSelf = $disguiseSelfArray[$level];
+
+       $readLanguagesArray = getReadLanguagesArray ($alignment);
+       $readLanguages = $readLanguagesArray[$level];
+
+       $handlePoisonArray = getHandlePoisonArray ($alignment);
+       $handlePoison = $handlePoisonArray[$level];
+
+       $castSpellScrollArray = getCastSpellScrollArray ($alignment);
+       $castSpellScroll = $castSpellScrollArray[$level];
+
+
+
        
 
         $weaponArray = array();
@@ -551,6 +596,14 @@
                 echo $criticalDie;
             ?>
         </span>
+
+        
+        <span id="luckDie">
+            <?php
+                echo $luckDie;
+            ?>
+        </span>
+
         
         <span id="attackBonus">
             <?php
@@ -567,7 +620,6 @@
             ?>
         </span>
 
-        <span id="spellCheck"></span>
 
         
         <span id="title">
@@ -647,6 +699,21 @@
            ?>
        </span>
        
+       
+       <span id="backstab"></span>
+       <span id="sneakSilently"></span>
+       <span id="hideInShadows"></span>
+       <span id="pickPocket"></span>
+       <span id="climb"></span>
+       <span id="pickLock"></span>
+       <span id="findTrap"></span>
+       <span id="disableTrap"></span>
+       <span id="forgeDoc"></span>
+       <span id="disguiseSelf"></span>
+       <span id="readLanguages"></span>
+       <span id="handlePoison"></span>
+       <span id="castSpellScroll"></span>
+       
 
        
 	</section>
@@ -705,7 +772,6 @@
             "addLanguages": "Common" + bonusLanguages,
             "armourClass": <?php echo $totalAcDefense ?> + baseAC,
             "hp": getHitPoints (level, staminaMod) + hitPointAdjustPerLevel(birthAugur,  luckMod),
-            "spellCheck": personalityMod + <?php echo $level ?>,
 			"melee": <?php echo $attackBonus ?> + strengthMod + meleeAdjust(birthAugur, luckMod),
 			"range": <?php echo $attackBonus ?> + agilityMod + rangeAdjust(birthAugur, luckMod),
 			"meleeDamage": strengthMod + meleeDamageAdjust(birthAugur, luckMod),
@@ -713,6 +779,19 @@
             "reflex": <?php echo $reflexBase ?> + agilityMod + adjustRef(birthAugur, luckMod),
             "fort": <?php echo $fortBase ?> + staminaMod + adjustFort(birthAugur,luckMod),
             "will": <?php echo $willBase ?> + personalityMod + adjustWill(birthAugur, luckMod),
+            "backstab": <?php echo $backstab ?>,
+            "sneakSilently": <?php echo $sneakSilently ?> + agilityMod,
+            "hideInShadows": <?php echo $hideInShadows ?> + agilityMod,
+            "pickPocket": <?php echo $pickPocket ?> + agilityMod,
+            "climb": <?php echo $climb ?> + agilityMod,
+            "pickLock": <?php echo $pickLock ?> + agilityMod,
+            "findTrap": <?php echo $findTrap ?> + intelligenceMod,
+            "disableTrap": <?php echo $disableTrap ?> + agilityMod,
+            "forgeDoc": <?php echo $forgeDoc ?> + agilityMod,
+            "disguiseSelf": <?php echo $disguiseSelf ?> + personalityMod,
+            "readLanguages": <?php echo $readLanguages ?> + intelligenceMod,
+            "handlePoison": <?php echo $handlePoison ?>,
+            "castSpellScroll":  '<?php echo $castSpellScroll ?>',
             "initiative": agilityMod + adjustInit(birthAugur, luckMod)
 
 		};
@@ -792,7 +871,20 @@
       $("#trainedWeapon").html("Trained Weapon: " + data.trainedWeapon);
       $("#tradeGoods").html("Trade Goods: " + data.tradeGoods);
       
-      $("#spellCheck").html(addModifierSign(data.spellCheck));
+      $("#backstab").html(addModifierSign(data.backstab));
+      $("#sneakSilently").html(addModifierSign(data.sneakSilently));
+      $("#hideInShadows").html(addModifierSign(data.hideInShadows));
+      $("#pickPocket").html(addModifierSign(data.pickPocket));
+      $("#climb").html(addModifierSign(data.climb));
+      $("#pickLock").html(addModifierSign(data.pickLock));
+      $("#findTrap").html(addModifierSign(data.findTrap));
+      $("#disableTrap").html(addModifierSign(data.disableTrap));
+      $("#forgeDoc").html(addModifierSign(data.forgeDoc));
+      $("#disguiseSelf").html(addModifierSign(data.disguiseSelf));
+      $("#readLanguages").html(addModifierSign(data.readLanguages));
+      $("#handlePoison").html(addModifierSign(data.handlePoison));
+      $("#castSpellScroll").html(data.castSpellScroll + data.intelligenceModifer);
+      
       
 
 	 

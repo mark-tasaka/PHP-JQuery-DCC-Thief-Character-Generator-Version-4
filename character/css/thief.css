@@ -18,7 +18,7 @@ body{
 }
 
 
-/*DCC Cleric Generator Version 4 css*/
+/*DCC Thief Generator Version 4 css*/
 
 #characterName{
     position:absolute;
@@ -161,18 +161,18 @@ body{
 
 #gearList{
     position:absolute;
-    top: 883px;
-    left: 450px;
+    top: 740px;
+    left: 690px;
     font-size: 0.6em;
     width: 220px;
 }
 
 #abilityScoreGeneration{
     position:absolute;
-    top: 1110px;
-    left: 720px;
+    top: 1070px;
+    left: 700px;
     font-size: 0.5em;
-    width: 200px;
+    width: 190px;
 }
 
 
@@ -193,22 +193,20 @@ body{
 }
 
 
-#tradeGoods{
+#trainedWeapon{
     position:absolute;
-    top: 1130px;
-    left: 450px;
+    top: 495px;
+    left: 360px;
 	font-size: 0.6em;
 }
 
 
-#trainedWeapon{
+#tradeGoods{
     position:absolute;
-    top: 1145px;
-    left: 450px;
-    font-size: 0.6em;
-    width: 200px;
+    top: 515px;
+    left: 360px;
+	font-size: 0.6em;
 }
-
 
 
 
@@ -423,8 +421,22 @@ body{
 
 #initiative{
     position:absolute;
-    top: 370px;
-    left: 360px;
+    top: 360px;
+    left: 365px;
+    font-size: 0.9em;
+}
+
+#luckDie{
+    position:absolute;
+    top: 357px;
+    left: 485px;
+    font-size: 0.9em;
+}
+
+#attackBonus{
+    position:absolute;
+    top: 360px;
+    left: 617px;
     font-size: 0.9em;
 }
 
@@ -452,25 +464,25 @@ body{
 
 #languages{
     position:absolute;
-    top: 430px;
+    top: 410px;
     left: 360px;
     font-size: 0.8em;
-    width: 300px;
+    width: 320px;
 }
 
 
 #melee{
     position:absolute;
-    top: 718px;
-    left: 855px;
+    top: 575px;
+    left: 550px;
 	font-size: 1em;
 }
 
 
 #range{
     position:absolute;
-    top: 758px;
-    left: 855px;
+    top: 615px;
+    left: 550px;
 	font-size: 1em;
 }
 
@@ -478,208 +490,115 @@ body{
 
 #meleeDamage{
     position:absolute;
-    top: 718px;
-    left: 900px;
+    top: 575px;
+    left: 590px;
 	font-size: 1em;
 }
 
 
 #rangeDamage{
     position:absolute;
-    top: 758px;
-    left: 900px;
+    top: 615px;
+    left: 590px;
 	font-size: 1em;
 }
 
 
-
-#layHandsLaw1{
+#dieRollMethod{
     position: absolute;
-    top: 655px;
-    left: 495px;
-	font-size: 0.7em;
-}
-
-#layHandsLaw2{
-    position: absolute;
-    top: 690px;
-    left: 495px;
-	font-size: 0.7em;
-}
-
-#layHandsLaw3{
-    position: absolute;
-    top: 729px;
-    left: 495px;
-	font-size: 0.7em;
-}
-
-#layHandsLaw4{
-    position: absolute;
-    top: 765px;
-    left: 495px;
-	font-size: 0.7em;
+    top: 100px;
+    left:  50px;
+	font-size: 0.5em;
 }
 
 
-#layHandsLaw5{
-    position: absolute;
-    top: 802px;
-    left: 495px;
-	font-size: 0.7em;
-}
-
-
-#layHandsNeutral1{
-    position: absolute;
-    top: 655px;
-    left: 566px;
-	font-size: 0.7em;
-}
-
-#layHandsNeutral2{
-    position: absolute;
-    top: 690px;
-    left: 566px;
-	font-size: 0.7em;
-}
-
-#layHandsNeutral3{
-    position: absolute;
-    top: 729px;
-    left: 566px;
-	font-size: 0.7em;
-}
-
-#layHandsNeutral4{
-    position: absolute;
-    top: 765px;
-    left: 566px;
-	font-size: 0.7em;
-}
-
-
-#layHandsNeutral5{
-    position: absolute;
-    top: 802px;
-    left: 566px;
-	font-size: 0.7em;
-}
-
-
-#layHandsChaos1{
-    position: absolute;
-    top: 655px;
-    left: 633px;
-	font-size: 0.7em;
-}
-
-#layHandsChaos2{
-    position: absolute;
-    top: 690px;
-    left: 633px;
-	font-size: 0.7em;
-}
-
-#layHandsChaos3{
-    position: absolute;
-    top: 729px;
-    left: 633px;
-	font-size: 0.7em;
-}
-
-#layHandsChaos4{
-    position: absolute;
-    top: 765px;
-    left: 633px;
-	font-size: 0.7em;
-}
-
-
-#layHandsChaos5{
-    position: absolute;
-    top: 802px;
-    left: 633px;
-	font-size: 0.7em;
-}
-
-#level1Spells{
-    position: absolute;
-    top: 545px;
-    left: 435px;
-	font-size: 0.8em;
-}
-
-#level2Spells{
-    position: absolute;
-    top: 545px;
-    left: 485px;
-	font-size: 0.8em;
-}
-
-#level3Spells{
-    position: absolute;
-    top: 545px;
-    left: 535px;
-	font-size: 0.8em;
-}
-
-#level4Spells{
-    position: absolute;
-    top: 545px;
-    left: 585px;
-	font-size: 0.8em;
-}
-
-#level5Spells{
-    position: absolute;
-    top: 545px;
-    left: 640px;
-	font-size: 0.8em;
-}
-
-
-
-
-#spellCheck{
+#backstab{
     position:absolute;
-    top: 370px;
-    left: 490px;
-	font-size: 1em;
+    top: 759px;
+    left: 600px;
+    font-size: 0.7em;
 }
 
-
-#attackBonus{
+#sneakSilently{
     position:absolute;
-    top: 370px;
-    left: 617px;
-	font-size: 1em;
+    top: 782px;
+    left: 600px;
+    font-size: 0.7em;
 }
 
-
-
-#deity{
+#hideInShadows{
     position:absolute;
-    top: 883px;
-    left: 705px;
-    font-size: 0.6em;
-    width: 220px;
+    top: 806px;
+    left: 600px;
+    font-size: 0.7em;
 }
 
-
-#weaponsAllowed{
+#pickPocket{
     position:absolute;
-    top: 905px;
-    left: 705px;
-    font-size: 0.6em;
-    width: 220px;
+    top: 830px;
+    left: 600px;
+    font-size: 0.7em;
 }
 
-
-#unholy{
+#climb{
     position:absolute;
-    top: 942px;
-    left: 705px;
-    font-size: 0.6em;
-    width: 220px;
+    top: 853px;
+    left: 600px;
+    font-size: 0.7em;
+}
+
+#pickLock{
+    position:absolute;
+    top: 878px;
+    left: 600px;
+    font-size: 0.7em;
+}
+
+#findTrap{
+    position:absolute;
+    top: 900px;
+    left: 600px;
+    font-size: 0.7em;
+}
+
+#disableTrap{
+    position:absolute;
+    top: 922px;
+    left: 600px;
+    font-size: 0.7em;
+}
+
+#forgeDoc{
+    position:absolute;
+    top: 945px;
+    left: 600px;
+    font-size: 0.7em;
+}
+
+#disguiseSelf{
+    position:absolute;
+    top: 969px;
+    left: 600px;
+    font-size: 0.7em;
+}
+
+#readLanguages{
+    position:absolute;
+    top: 992px;
+    left: 600px;
+    font-size: 0.7em;
+}
+
+#handlePoison{
+    position:absolute;
+    top: 1019px;
+    left: 600px;
+    font-size: 0.7em;
+}
+
+#castSpellScroll{
+    position:absolute;
+    top: 1042px;
+    left: 600px;
+    font-size: 0.7em;
 }
