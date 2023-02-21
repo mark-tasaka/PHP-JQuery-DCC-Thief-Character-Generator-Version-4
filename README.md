@@ -9,6 +9,11 @@ The two most notable differences between Version 3 and Version 4 of the DCC Thie
 
 ---------------
 
+Update 1.01: 2023-02-20
+
+The completed version of the Thief Character Generator Version 4 has been added.
+
+
 Initial commit: 2023-02-19
 
 The initial commit for the fourth iteration of the DCC Thief Character Generator.
