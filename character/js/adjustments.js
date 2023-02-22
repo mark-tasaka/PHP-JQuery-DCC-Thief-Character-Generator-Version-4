@@ -149,6 +149,22 @@ function addModifierSign (modifier) {
 		return modifier;
 	}
 }
+
+//
+function thiefSpellScrollMod(modifier){
+	if(modifier == 0)
+	{
+		return "";
+	}
+	else if(modifier > 0)
+	{
+		return "+" + modifier;
+	}
+	else
+	{
+		return modifier;
+	}
+}
 	  
 
 /*

@@ -205,14 +205,14 @@
         {
             rsort($abilityScoreArray);
 
-            $strength = $abilityScoreArray[3];
-            $agility = $abilityScoreArray[5];
-            $stamina = $abilityScoreArray[4];
-            $personality = $abilityScoreArray[0];
-            $intelligence = $abilityScoreArray[1];
-            $luck = $abilityScoreArray[2];
+            $strength = $abilityScoreArray[2];
+            $agility = $abilityScoreArray[0];
+            $stamina = $abilityScoreArray[1];
+            $personality = $abilityScoreArray[5];
+            $intelligence = $abilityScoreArray[4];
+            $luck = $abilityScoreArray[3];
 
-            $optimizeAbilityScoreMessage = "<br/>Ability Scores optimized in the order of Per, Int, Luck, Str, Sta, Agi.";
+            $optimizeAbilityScoreMessage = "<br/>Ability Scores optimized in the order of Agi, Sta, Str, Luck, Int, Per.";
         }
         else
         {
@@ -762,6 +762,7 @@
             "agilityModifer": addModifierSign(agilityMod),
             "staminaModifer": addModifierSign(staminaMod),
             "luckModifer": addModifierSign(luckMod),
+            "thiefSepcialSave": thiefSpellScrollMod(intelligenceMod),
 			"profession":  profession.occupation,
             "acBase": baseAC,
 			"luckySign": birthAugur.luckySign,
@@ -883,7 +884,7 @@
       $("#disguiseSelf").html(addModifierSign(data.disguiseSelf));
       $("#readLanguages").html(addModifierSign(data.readLanguages));
       $("#handlePoison").html(addModifierSign(data.handlePoison));
-      $("#castSpellScroll").html(data.castSpellScroll + data.intelligenceModifer);
+      $("#castSpellScroll").html(data.castSpellScroll + data.thiefSepcialSave);
       
       
 
